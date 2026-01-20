@@ -1,0 +1,444 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Provincial Reference Database Schema",
+  "description": "Schema for structured provincial physician fee schedule reference",
+  "version": "1.0",
+  
+  "definitions": {
+    
+    "metadata": {
+      "type": "object",
+      "required": ["province_code", "province_name", "document_name", "effective_date", "extraction_date", "total_pages"],
+      "properties": {
+        "province_code": {
+          "type": "string",
+          "enum": ["AB", "ON", "SK", "MB", "BC"],
+          "description": "Two-letter province code"
+        },
+        "province_name": {
+          "type": "string",
+          "description": "Full province name"
+        },
+        "document_name": {
+          "type": "string",
+          "description": "Source PDF filename"
+        },
+        "document_version": {
+          "type": "string",
+          "description": "Version identifier from document (e.g., 'April 1, 2024')"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date",
+          "description": "When fee schedule took effect"
+        },
+        "extraction_date": {
+          "type": "string",
+          "format": "date",
+          "description": "When reference was built"
+        },
+        "total_pages": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Total pages in source PDF"
+        },
+        "extractor_version": {
+          "type": "string",
+          "description": "Version of extraction code used"
+        }
+      }
+    },
+    
+    "global_rule": {
+      "type": "object",
+      "required": ["rule_id", "rule_text", "rule_type", "source_pages"],
+      "properties": {
+        "rule_id": {
+          "type": "string",
+          "description": "Rule identifier (e.g., 'Rule 7', 'Preamble 3.2')"
+        },
+        "rule_title": {
+          "type": ["string", "null"],
+          "description": "Title if present"
+        },
+        "rule_text": {
+          "type": "string",
+          "description": "Complete verbatim text of rule"
+        },
+        "applies_to_sections": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["ALL"],
+          "description": "Section codes this applies to, or ['ALL']"
+        },
+        "applies_to_codes": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": [],
+          "description": "Specific codes if enumerated"
+        },
+        "rule_type": {
+          "type": "string",
+          "enum": ["general", "billing", "exclusion", "time", "documentation", "eligibility"],
+          "description": "Category of rule"
+        },
+        "source_pages": {
+          "type": "array",
+          "items": {"type": "integer"},
+          "description": "Page numbers where rule appears"
+        }
+      }
+    },
+    
+    "section": {
+      "type": "object",
+      "required": ["section_code", "section_name", "page_start", "page_end"],
+      "properties": {
+        "section_code": {
+          "type": "string",
+          "description": "Section identifier (e.g., '01', '13-4')"
+        },
+        "section_name": {
+          "type": "string",
+          "description": "Section name (e.g., 'Internal Medicine')"
+        },
+        "page_start": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "First page of section"
+        },
+        "page_end": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Last page of section"
+        },
+        "section_preamble": {
+          "type": ["string", "null"],
+          "description": "Section-specific rules text"
+        },
+        "parent_section": {
+          "type": ["string", "null"],
+          "description": "Parent section code if subsection"
+        },
+        "specialty_type": {
+          "type": "string",
+          "enum": ["gp", "specialist", "both"],
+          "description": "Who can bill codes in this section"
+        },
+        "hospital_premium_applicable": {
+          "type": "boolean",
+          "description": "Whether hospital premium applies"
+        },
+        "hospital_premium_percentage": {
+          "type": ["number", "null"],
+          "description": "Premium percentage if applicable"
+        },
+        "hospital_premium_codes": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Specific codes if enumerated"
+        }
+      }
+    },
+    
+    "code": {
+      "type": "object",
+      "required": ["code", "description", "section_code", "source_page"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Billing code (e.g., '8340', 'A101')"
+        },
+        "code_variant": {
+          "type": ["string", "null"],
+          "description": "Suffix if applicable"
+        },
+        "description": {
+          "type": "string",
+          "description": "Short official description"
+        },
+        "description_full": {
+          "type": ["string", "null"],
+          "description": "Full text including notes"
+        },
+        "base_fee": {
+          "type": ["number", "null"],
+          "description": "Base rate in dollars (null if 'By Report')"
+        },
+        "fee_unit": {
+          "type": "string",
+          "enum": ["flat", "per_unit", "per_15min", "percentage"],
+          "default": "flat",
+          "description": "How fee is calculated"
+        },
+        "fee_basis": {
+          "type": ["string", "null"],
+          "description": "If percentage, what it's percentage of"
+        },
+        "section_code": {
+          "type": "string",
+          "description": "FK to sections"
+        },
+        "source_page": {
+          "type": "integer",
+          "description": "Primary page where defined"
+        },
+        "all_pages": {
+          "type": "array",
+          "items": {"type": "integer"},
+          "description": "All pages where code appears"
+        },
+        "notes_verbatim": {
+          "type": ["string", "null"],
+          "description": "All note text exactly as written"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "deleted", "amended"],
+          "default": "active",
+          "description": "Code status"
+        },
+        "status_date": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "If deleted/amended, effective date"
+        }
+      }
+    },
+    
+    "code_attribute": {
+      "type": "object",
+      "required": ["code", "attribute_type", "attribute_value", "attribute_source"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "FK to codes"
+        },
+        "attribute_type": {
+          "type": "string",
+          "enum": [
+            "modality_telephone",
+            "modality_video",
+            "modality_both",
+            "modality_in_person",
+            "modality_asynchronous",
+            "minimum_time_minutes",
+            "maximum_time_minutes",
+            "time_documentation_required",
+            "patient_initiated_required",
+            "physician_initiated_allowed",
+            "referral_required",
+            "referral_not_required",
+            "self_referral_allowed",
+            "certification_required",
+            "approval_required",
+            "written_report_required",
+            "frequency_per_day",
+            "frequency_per_week",
+            "frequency_per_month",
+            "frequency_per_year",
+            "frequency_per_lifetime",
+            "age_restriction_min",
+            "age_restriction_max",
+            "setting_restriction",
+            "provider_type_restriction"
+          ],
+          "description": "Type of attribute"
+        },
+        "attribute_value": {
+          "type": "string",
+          "description": "The extracted value"
+        },
+        "attribute_source": {
+          "type": "string",
+          "enum": ["explicit", "inherited_section", "inherited_global", "inferred"],
+          "description": "How value was determined"
+        },
+        "source_page": {
+          "type": ["integer", "null"],
+          "description": "Page where stated (if explicit)"
+        },
+        "source_rule": {
+          "type": ["string", "null"],
+          "description": "Rule ID (if inherited)"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Confidence in extraction"
+        },
+        "extraction_notes": {
+          "type": ["string", "null"],
+          "description": "Notes on how value was determined"
+        }
+      }
+    },
+    
+    "modifier": {
+      "type": "object",
+      "required": ["modifier_code", "modifier_name", "modifier_type", "source_page"],
+      "properties": {
+        "modifier_code": {
+          "type": "string",
+          "description": "Code for the modifier"
+        },
+        "modifier_name": {
+          "type": "string",
+          "description": "Descriptive name"
+        },
+        "modifier_type": {
+          "type": "string",
+          "enum": ["time_premium", "age_premium", "location_premium", "complexity", "setting", "add_on"],
+          "description": "Category of modifier"
+        },
+        "modifier_value": {
+          "type": ["number", "null"],
+          "description": "Amount or percentage"
+        },
+        "modifier_unit": {
+          "type": "string",
+          "enum": ["flat", "percentage"],
+          "description": "How modifier is applied"
+        },
+        "applicable_to_codes": {
+          "type": ["array", "null"],
+          "items": {"type": "string"},
+          "description": "Specific codes if listed"
+        },
+        "applicable_to_sections": {
+          "type": ["array", "null"],
+          "items": {"type": "string"},
+          "description": "Sections if broad applicability"
+        },
+        "exclusion_codes": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": [],
+          "description": "Codes it cannot be used with"
+        },
+        "conditions_verbatim": {
+          "type": ["string", "null"],
+          "description": "Full conditions text"
+        },
+        "source_page": {
+          "type": "integer",
+          "description": "Page where defined"
+        }
+      }
+    },
+    
+    "exclusion": {
+      "type": "object",
+      "required": ["exclusion_id", "exclusion_type", "source_page"],
+      "properties": {
+        "exclusion_id": {
+          "type": "string",
+          "description": "Generated unique ID"
+        },
+        "exclusion_type": {
+          "type": "string",
+          "enum": ["same_day", "same_provider", "same_patient", "same_encounter", "mutually_exclusive"],
+          "description": "Type of exclusion"
+        },
+        "code_a": {
+          "type": ["string", "null"],
+          "description": "First code in exclusion"
+        },
+        "code_b": {
+          "type": ["string", "null"],
+          "description": "Second code (if pairwise)"
+        },
+        "code_list": {
+          "type": ["array", "null"],
+          "items": {"type": "string"},
+          "description": "All codes (if group exclusion)"
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["bidirectional", "a_excludes_b", "b_excludes_a"],
+          "description": "Direction of exclusion"
+        },
+        "conditions": {
+          "type": ["string", "null"],
+          "description": "Any conditions on exclusion"
+        },
+        "source_page": {
+          "type": "integer",
+          "description": "Page where stated"
+        },
+        "source_rule": {
+          "type": ["string", "null"],
+          "description": "Rule ID if from preamble"
+        }
+      }
+    },
+    
+    "relationship": {
+      "type": "object",
+      "required": ["relationship_id", "relationship_type", "code_from", "code_to", "source_page"],
+      "properties": {
+        "relationship_id": {
+          "type": "string",
+          "description": "Generated unique ID"
+        },
+        "relationship_type": {
+          "type": "string",
+          "enum": ["add_on_to", "variant_of", "replaces", "see_also", "same_service_different_setting"],
+          "description": "Type of relationship"
+        },
+        "code_from": {
+          "type": "string",
+          "description": "Source code"
+        },
+        "code_to": {
+          "type": "string",
+          "description": "Target code"
+        },
+        "conditions": {
+          "type": ["string", "null"],
+          "description": "When relationship applies"
+        },
+        "source_page": {
+          "type": "integer",
+          "description": "Page where stated"
+        }
+      }
+    }
+  },
+  
+  "type": "object",
+  "required": ["metadata", "global_rules", "sections", "codes"],
+  "properties": {
+    "metadata": {
+      "$ref": "#/definitions/metadata"
+    },
+    "global_rules": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/global_rule"}
+    },
+    "sections": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/section"}
+    },
+    "codes": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/code"}
+    },
+    "code_attributes": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/code_attribute"}
+    },
+    "modifiers": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/modifier"}
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/exclusion"}
+    },
+    "relationships": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/relationship"}
+    }
+  }
+}
