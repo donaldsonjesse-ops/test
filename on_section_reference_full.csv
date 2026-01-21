@@ -1,0 +1,273 @@
+page_start,level_1,level_2
+15,General Preamble,
+15,General Preamble,Introduction
+16,General Preamble,Definitions
+22,General Preamble,General Information
+27,General Preamble,Constituent and Common Elements of Insured Services
+29,General Preamble,Specific Elements of Assessments
+30,General Preamble,Consultations
+35,General Preamble,Assessments
+54,General Preamble,Hospital and Institutional Consultations and Assessments
+68,General Preamble,"Psychotherapy, Psychiatric and Counselling Services"
+69,General Preamble,"Psychotherapy, Psychiatric and Counselling Services"
+75,General Preamble,Interviews
+76,General Preamble,Delegated Procedure
+77,General Preamble,Delegated Procedure
+78,General Preamble,Age-Based Fee Premiums
+79,General Preamble,Special Visit Premiums
+93,General Preamble,Supervision Of Postgraduate Medical Trainees
+99,General Preamble,Surgical Assistants’ Services
+103,General Preamble,Surgical Assistants’ Services
+106,General Preamble,Anaesthesiologists’ Services
+116,General Preamble,Supportive Care/Monitoring By Surgical Assistant or Anaesthesiologist
+117,General Preamble,Other Premiums
+124,General Preamble,Emergency Department Alternative Funding Agreements
+125,General Preamble,Diagnostic Procedures Ordered By Persons Other Than Physicians
+129,Consultations and Visits,
+129,Consultations and Visits,Family Practice & Practice in General (00)
+190,Consultations and Visits,Virtual Care Services
+200,Consultations and Visits,Anaesthesia (01)
+203,Consultations and Visits,Cardiology (60)
+205,Consultations and Visits,Cardiac Surgery (09)
+207,Consultations and Visits,Clinical Immunology (62)
+209,Consultations and Visits,Community Medicine (05)
+213,Consultations and Visits,Critical Care Medicine (11)
+215,Consultations and Visits,Dermatology (02)
+220,Consultations and Visits,Emergency Medicine (12)
+221,Consultations and Visits,Endocrinology & Metabolism (15)
+227,Consultations and Visits,Gastroenterology (41)
+230,Consultations and Visits,General Surgery (03)
+232,Consultations and Visits,General Thoracic Surgery (64)
+234,Consultations and Visits,Genetics (22)
+240,Consultations and Visits,Geriatrics (07)
+245,Consultations and Visits,Haematology (61)
+247,Consultations and Visits,Infectious Disease (46)
+250,Consultations and Visits,Internal and Occupational Medicine (13)
+253,Consultations and Visits,Laboratory Medicine (28)
+254,Consultations and Visits,Medical Oncology (44)
+256,Consultations and Visits,Nephrology (16)
+260,Consultations and Visits,Neurology (18)
+264,Consultations and Visits,Neurosurgery (04)
+266,Consultations and Visits,Nuclear Medicine (63)
+268,Consultations and Visits,Obstetrics and Gynaecology (20)
+270,Consultations and Visits,Ophthalmology (23)
+279,Consultations and Visits,Orthopaedic Surgery (06)
+281,Consultations and Visits,Otolaryngology (24)
+283,Consultations and Visits,Paediatrics (26)
+289,Consultations and Visits,Physical Medicine & Rehabilitation (31)
+295,Consultations and Visits,Plastic Surgery (08)
+297,Consultations and Visits,Psychiatry (19)
+306,Consultations and Visits,Diagnostic Radiology (33)
+309,Consultations and Visits,Radiation Oncology (34)
+311,Consultations and Visits,Respiratory Disease (47)
+314,Consultations and Visits,Rheumatology (48)
+320,Consultations and Visits,Urology (35)
+322,Consultations and Visits,Vascular Surgery (17)
+325,Nuclear Medicine - IN VIVO,
+325,Nuclear Medicine - IN VIVO,Preamble
+327,Nuclear Medicine - IN VIVO,Cardiovascular System
+328,Nuclear Medicine - IN VIVO,Endocrine System
+329,Nuclear Medicine - IN VIVO,Gastrointestinal System
+330,Nuclear Medicine - IN VIVO,Genitourinary System
+331,Nuclear Medicine - IN VIVO,Haematopoietic System
+332,Nuclear Medicine - IN VIVO,Musculoskeletal System
+333,Nuclear Medicine - IN VIVO,Nervous System and Respiratory System
+334,Nuclear Medicine - IN VIVO,Miscellaneous
+335,Nuclear Medicine - IN VIVO,Scintimammography
+336,Nuclear Medicine - IN VIVO,Clinical Procedures Associated With Diagnostic Nuclear Medicine
+337,Positron Emission Tomography (PET),
+337,Positron Emission Tomography (PET),Preamble
+343,Radiation Oncology,
+343,Radiation Oncology,Preamble
+344,Radiation Oncology,Radiotherapy
+347,Radiation Oncology,Radium and Radioisotopes (Sealed Sources)
+348,Radiation Oncology,Radioisotopes (Non-sealed Sources)
+349,Diagnostic Radiology,
+349,Diagnostic Radiology,Preamble
+353,Diagnostic Radiology,Head and Neck
+354,Diagnostic Radiology,Spine and Pelvis
+355,Diagnostic Radiology,Upper Extremities
+356,Diagnostic Radiology,Lower Extremities
+357,Diagnostic Radiology,Skeletal Surveys
+358,Diagnostic Radiology,Chest and Abdomen
+359,Diagnostic Radiology,Gastrointestinal Tract
+360,Diagnostic Radiology,Genitourinary Tract
+361,Diagnostic Radiology,Obstetrics and Gynaecology
+362,Diagnostic Radiology,Fluoroscopy - By physician With or Without Spot Films
+363,Diagnostic Radiology,Special Examinations
+364,Diagnostic Radiology,Bone Mineral Density (BMD) Measurement
+366,Diagnostic Radiology,Computed Tomography (CT)
+372,Diagnostic Radiology,Miscellaneous Examinations
+373,Clinical Procedures associated with Diagnostic Radiological Examinations,
+373,Clinical Procedures associated with Diagnostic Radiological Examinations,Preamble
+374,Clinical Procedures associated with Diagnostic Radiological Examinations,Angiography
+376,Clinical Procedures associated with Diagnostic Radiological Examinations,Miscellaneous Procedures
+379,Magnetic Resonance Imaging (MRI),
+379,Magnetic Resonance Imaging (MRI),Preamble
+383,Diagnostic Ultrasound,
+383,Diagnostic Ultrasound,Preamble
+385,Diagnostic Ultrasound,Head and Neck
+386,Diagnostic Ultrasound,"Thorax, Abdomen and Retroperitoneum"
+387,Diagnostic Ultrasound,Pregnancy
+388,Diagnostic Ultrasound,Pelvis
+389,Diagnostic Ultrasound,Vascular System
+391,Diagnostic Ultrasound,Vascular Laboratory Fees
+392,Diagnostic Ultrasound,Miscellaneous
+393,Diagnostic Ultrasound,Ultrasonic Guidance
+395,Pulmonary Function Studies,
+395,Pulmonary Function Studies,Preamble
+401,Diagnostic and Therapeutic Procedures,
+401,Diagnostic and Therapeutic Procedures,Preamble
+404,Diagnostic and Therapeutic Procedures,Allergy
+406,Diagnostic and Therapeutic Procedures,Anaesthesia
+407,Diagnostic and Therapeutic Procedures,Cardiovascular
+414,Diagnostic and Therapeutic Procedures,Electrocardiography (ECG)
+419,Diagnostic and Therapeutic Procedures,Non-Invasive Cardiography
+420,Diagnostic and Therapeutic Procedures,Echocardiography
+422,Diagnostic and Therapeutic Procedures,Echocardiography
+427,Diagnostic and Therapeutic Procedures,Critical Care
+437,Diagnostic and Therapeutic Procedures,Dermatology
+438,Diagnostic and Therapeutic Procedures,Dialysis
+442,Diagnostic and Therapeutic Procedures,Endocrinology and Metabolism
+445,Diagnostic and Therapeutic Procedures,Gastroenterology
+447,Diagnostic and Therapeutic Procedures,Gynaecology
+449,Diagnostic and Therapeutic Procedures,Haematology
+450,Diagnostic and Therapeutic Procedures,Home and Self Care Services
+451,Diagnostic and Therapeutic Procedures,Injections or Infusions
+460,Diagnostic and Therapeutic Procedures,Laboratory Medicine
+469,Diagnostic and Therapeutic Procedures,Nephrology
+470,Diagnostic and Therapeutic Procedures,Nerve Blocks for Acute Pain Management
+474,Diagnostic and Therapeutic Procedures,Nerve Blocks - Interventional Pain Injections
+479,Diagnostic and Therapeutic Procedures,Nerve Blocks - Peripheral/Other Injections
+483,Diagnostic and Therapeutic Procedures,Neurology
+487,Diagnostic and Therapeutic Procedures,Neurosurgery
+489,Diagnostic and Therapeutic Procedures,Ophthalmology
+497,Diagnostic and Therapeutic Procedures,Otolaryngology
+501,Diagnostic and Therapeutic Procedures,Palliative Care
+503,Diagnostic and Therapeutic Procedures,Physical Medicine
+506,Diagnostic and Therapeutic Procedures,Psychiatry and Respiratory Disease
+507,Diagnostic and Therapeutic Procedures,Sleep Studies
+515,Diagnostic and Therapeutic Procedures,Urology
+517,Obstetrics,
+517,Obstetrics,Preamble
+520,Obstetrics,Prenatal Care
+522,Obstetrics,Labour - Delivery
+525,Obstetrics,Obstetrical Anaesthesia
+526,Obstetrics,High Risk Pregnancies
+527,Obstetrics,Maternal - Fetal Procedures
+529,Surgical Preamble,
+529,Surgical Preamble,Preamble
+537,Integumentary System Surgical Procedures,
+537,Integumentary System Surgical Procedures,Skin and Subcutaneous Tissue
+560,Integumentary System Surgical Procedures,Operations of the Breast
+565,Musculoskeletal System Surgical Procedures,
+565,Musculoskeletal System Surgical Procedures,Preamble
+567,Musculoskeletal System Surgical Procedures,General Fees
+572,Musculoskeletal System Surgical Procedures,Hand and Wrist
+580,Musculoskeletal System Surgical Procedures,Elbow and Forearm
+586,Musculoskeletal System Surgical Procedures,"Shoulder, Arm and Chest"
+592,Musculoskeletal System Surgical Procedures,Skull and Mandible
+602,Musculoskeletal System Surgical Procedures,Pelvis and Hip
+607,Musculoskeletal System Surgical Procedures,Femur
+610,Musculoskeletal System Surgical Procedures,Knee
+617,Musculoskeletal System Surgical Procedures,Fibula and Tibia
+620,Musculoskeletal System Surgical Procedures,Foot and Ankle
+631,Respiratory Surgical Procedures,
+631,Respiratory Surgical Procedures,Nose
+634,Respiratory Surgical Procedures,Accessory Nasal Sinuses
+636,Respiratory Surgical Procedures,Larynx
+638,Respiratory Surgical Procedures,Trachea and Bronchi
+641,Respiratory Surgical Procedures,Chest Wall and Mediastinum
+643,Respiratory Surgical Procedures,Lungs and Pleura
+647,Cardiovascular Surgical Procedures,
+647,Cardiovascular Surgical Procedures,Preamble
+648,Cardiovascular Surgical Procedures,Heart and Pericardium
+656,Cardiovascular Surgical Procedures,Valves
+657,Cardiovascular Surgical Procedures,Arteries
+664,Cardiovascular Surgical Procedures,Veins
+667,Haematic and Lymphatic Surgical Procedures,
+667,Haematic and Lymphatic Surgical Procedures,Spleen and Marrow
+668,Haematic and Lymphatic Surgical Procedures,Lymph Channels
+669,Digestive System Surgical Procedures,
+669,Digestive System Surgical Procedures,Oral Cavity and Pharynx
+672,Digestive System Surgical Procedures,Salivary Glands and Ducts
+673,Digestive System Surgical Procedures,Lips
+674,Digestive System Surgical Procedures,Endoscopic Ultrasound
+675,Digestive System Surgical Procedures,Oesophagus
+679,Digestive System Surgical Procedures,Stomach
+683,Digestive System Surgical Procedures,Intestines (Except Rectum)
+691,Digestive System Surgical Procedures,Miscellaneous
+693,Digestive System Surgical Procedures,Rectum
+697,Digestive System Surgical Procedures,Liver
+698,Digestive System Surgical Procedures,Biliary Tract
+700,Digestive System Surgical Procedures,Pancreas
+701,Digestive System Surgical Procedures,"Abdomen, Peritoneum and Omentum"
+707,Urogenital and Urinary Surgical Procedures,
+707,Urogenital and Urinary Surgical Procedures,Preamble - Kidney and Upper Urinary Tract
+708,Urogenital and Urinary Surgical Procedures,Kidney and Upper Urinary Tract
+714,Urogenital and Urinary Surgical Procedures,Preamble - Bladder and Urethra
+715,Urogenital and Urinary Surgical Procedures,Bladder
+718,Urogenital and Urinary Surgical Procedures,Urethra
+721,Male Genital Surgical Procedures,
+721,Male Genital Surgical Procedures,Penis
+722,Male Genital Surgical Procedures,Testis
+723,Male Genital Surgical Procedures,Epididymis and Tunica Vaginalis
+724,Male Genital Surgical Procedures,Scrotum
+725,Male Genital Surgical Procedures,Vas Deferens
+726,Male Genital Surgical Procedures,Spermatic Cord and Seminal Vesicles
+727,Male Genital Surgical Procedures,Prostate
+729,Female Genital Surgical Procedures,
+729,Female Genital Surgical Procedures,Preamble
+730,Female Genital Surgical Procedures,Vulva and Introitus
+731,Female Genital Surgical Procedures,Vagina
+734,Female Genital Surgical Procedures,Cervix Uteri
+735,Female Genital Surgical Procedures,Corpus Uteri
+737,Female Genital Surgical Procedures,Fallopian Tube
+738,Female Genital Surgical Procedures,Ovary
+739,Endocrine Surgical Procedures,
+739,Endocrine Surgical Procedures,Thyroid Gland
+740,Endocrine Surgical Procedures,"Parathyroid, Thymus and Adrenal Glands"
+741,Neurological Surgical Procedures,
+741,Neurological Surgical Procedures,Cranial
+752,Neurological Surgical Procedures,Peripheral Nerves
+755,Ocular and Aural Surgical Procedures,
+755,Ocular and Aural Surgical Procedures,Eyeball
+756,Ocular and Aural Surgical Procedures,Cornea
+758,Ocular and Aural Surgical Procedures,"Sclera, Iris and Ciliary Body"
+759,Ocular and Aural Surgical Procedures,Crystalline Lens
+760,Ocular and Aural Surgical Procedures,Vitreous
+761,Ocular and Aural Surgical Procedures,Retina and Extra Ocular Muscles
+762,Ocular and Aural Surgical Procedures,Orbit
+763,Ocular and Aural Surgical Procedures,Eyelids
+765,Ocular and Aural Surgical Procedures,Conjunctiva
+766,Ocular and Aural Surgical Procedures,Lacrimal tract
+767,Ocular and Aural Surgical Procedures,External Ear
+769,Ocular and Aural Surgical Procedures,Middle Ear
+771,Ocular and Aural Surgical Procedures,Inner Ear
+773,Spinal Surgical Procedures,
+773,Spinal Surgical Procedures,Preamble
+775,Spinal Surgical Procedures,Anterior Spinal Decompression
+776,Spinal Surgical Procedures,Anterior Spinal Arthrodesis Following Decompression
+777,Spinal Surgical Procedures,Anterior Spinal Arthrodesis With Instrumentation Without Decompression
+778,Spinal Surgical Procedures,Posterior Spinal Decompression
+779,Spinal Surgical Procedures,Posterior Spinal Arthrodesis Following Decompression or Osteotomy
+781,Spinal Surgical Procedures,Posterior Spinal Arthrodesis As Sole Procedure
+782,Spinal Surgical Procedures,Fractures of the Spine
+783,Spinal Surgical Procedures,Tumours/Infections of the Spine
+784,Spinal Surgical Procedures,Deformities of the Spine
+785,Spinal Surgical Procedures,Revision Procedures for Spinal Surgery
+786,Spinal Surgical Procedures,Procedures on Musculoskeletal Elements
+787,Spinal Surgical Procedures,Procedures Involving Neural Elements
+789,Spinal Surgical Procedures,Meningocoele and Myelomeningocoele
+791,Appendix A,
+793,Appendix B,
+795,Appendix C,
+797,Appendix D,
+798,Appendix D,Surface Pathology
+802,Appendix D,Sub-Surface Pathology
+807,Appendix F,
+809,Appendix G,
+811,Appendix H,
+813,Appendix J,
+817,Appendix Q,
+829,Numeric Index,
